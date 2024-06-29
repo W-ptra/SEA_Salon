@@ -1,5 +1,10 @@
 # SEA_Salon
-Tugas Umum Seleksi Comfest.id Academy ~ Software Engineering
+Tugas Umum Seleksi Comfest.id Academy ~ Software Engineering  
+Visit this link: 
+```
+https://seasalon.wisnuputra.xyz
+```
+I already host it on cloud  
 # Usage
 ## prerequisite
 1. nodejs v20.2.0
@@ -29,6 +34,7 @@ http://localhost:8000/home
 5. Here the credential for login  
 ```
 # login as customer
+
 # email
 Sebastian@yahoo.com
 
@@ -37,6 +43,7 @@ bibi
 ```
 ```
 # login as admin
+
 # email
 thomas.n@compfest.id
 
@@ -44,17 +51,20 @@ thomas.n@compfest.id
 Admin123
 ```
 # Docker Usage  
-I personally recommended this, as I awalys use it almost on all my project.It eliminate the term `It work on my machine`.  
+I personally recommended this, as I awalys use it almost on all my project. It eliminate the term `It work on my machine`.  
 1. Create Network and databases container
 ```
-sudo docker network create seasalon_network
+docker network create seasalon_network
 
 docker run -d --name mariadb --network seasalon_network -e MYSQL_ROOT_PASSWORD=root wisnup001binus/mariadb_seasalon:1.0
-sudo docker network inspect seasalon_network
+docker network inspect seasalon_network
 ```
 2. Copy the `ipv4 address of mariadb container` to `-e HOST={ipv4 address}` when run `wisnup001binus/seasalon:1.0` container  
   
 ![img](https://drive.google.com/uc?export=view&id=1Z4XXvzQ6Hw1OBHGPAfM80mhUWuDH33ha)   
+  
+Example script:  
+  
 ```
 docker run -d -p 8000:8000 --name seasalon --network seasalon_network -e PORT=8000 -e SESSION_KEY="secret" -e DB_HOST="172.19.0.2" -e DB_USER="root" -e DB_PASSWORD="root" -e DB_DATABASE="seasalon" wisnup001binus/seasalon:1.0 
 
