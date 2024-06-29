@@ -25,16 +25,16 @@ node .
 http://localhost:8000/home
 ```
 5. Here the credential for login  
-login as customer
 ```
+# login as customer
 # email
 Sebastian@yahoo.com
 
 # password
 bibi
 ```
-login as admin
 ```
+# login as admin
 # email
 thomas.n@compfest.id
 
