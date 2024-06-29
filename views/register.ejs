@@ -17,7 +17,7 @@
 
     <h1 class="text-center mt-5">Register</h1>
     <form id="registerForm" action="" method="post" class="container d-flex justify-content-center align-items">
-        <div class="input-group p-5 d-flex flex-column" style="width: 40rem; background-color: #FFE0F8;">
+        <div class="input-group px-5 d-flex flex-column" style="width: 40rem; background-color: #FFE0F8; padding-top: 3rem; padding-bottom: 1rem;">
             <div class="mb-4">
                 <input type="text" class="form-control" id="fullName" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1">
             </div>
@@ -30,9 +30,13 @@
             <div>
                 <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
             </div>
-            <div class="d-flex align-items justify-content-center mt-3">
+            <p id="register_form_message" class="text-center m-0 mt-2 mb-1" style="color: red;"></p>
+            <div class="d-flex align-items justify-content-center mt-1 mb-1">
                 <button type="submit" class="btn" style="width: 8rem; background-color: #ED569B; color: white;">Submit</button>
             </div>
+            <a href="/login" style="text-decoration: none;">
+                <p class="text-center" style="color: black;">Already have account? Login here</p>
+            </a>
         </div>
     </form>
 

@@ -21,7 +21,7 @@ async function getUserByEmail(email) {
     try {
         const sql = 'SELECT * FROM users WHERE email = ?';
         const [rows] = await connection.execute(sql,[email]);
-        console.log(rows);
+        
         return rows;
     } catch (err) {
         console.error('Error fetching data:', err);
@@ -29,6 +29,7 @@ async function getUserByEmail(email) {
         await connection.end();
     }
 }
+
 
 module.exports = {
     createnewUser,

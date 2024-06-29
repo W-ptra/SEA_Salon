@@ -17,19 +17,22 @@
 
     <h1 class="text-center mt-5">Login</h1>
     <form id="loginForm" action="" method="post" class="container d-flex justify-content-center align-items">
-        <div class="input-group p-5 d-flex flex-column" style="width: 40rem; background-color: #FFE0F8;">
+        <div class="input-group px-5 d-flex flex-column" style="width: 40rem; background-color: #FFE0F8; padding-top: 3rem; padding-bottom: 1rem;">
             <div class="mb-4">
                 <input type="text" class="form-control" id="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
             </div>
             <div>
                 <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
             </div>
-            <div class="d-flex align-items justify-content-center mt-3">
+            <p id="login_form_message" class="text-center mt-2" style="color: red;" ></p>
+            <div class="d-flex align-items justify-content-center">
                 <button type="submit" class="btn" style="width: 8rem; background-color: #ED569B; color: white;">Submit</button>
             </div>
+            <a href="/register" style="text-decoration: none ;">
+                <p id="" class="text-center mt-2" style="color: black;" >Doesn't have account? Register here</p>
+            </a>
         </div>
     </form>
-    
 
     <script src="/js/loginScript.js"></script>
 

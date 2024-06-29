@@ -9,11 +9,16 @@ async function login(email,plainPassword){
 
     const hashedPassword = user[0].password;
     const isMatch = await comparePassword(plainPassword,hashedPassword);
-
+    
     if(!isMatch)
         return "Password incorrect";
 
-    return isMatch;
+    const result = {
+        isMatch,
+        role: user[0].role
+    }
+
+    return result;
 }
 
 module.exports = {login};
