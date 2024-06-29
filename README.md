@@ -6,7 +6,9 @@ Tugas Umum Seleksi Comfest.id Academy ~ Software Engineering
 2. mysql/mariadb database
 3. run database migration from file `schema.sql` on mysql/mariadb  
 Example:  
+  
 ![img](https://drive.google.com/uc?export=view&id=1KRT2reL-dpcb8cmOALLYndTt__Fim6Ir)   
+  
 ## Installation
 1. clone this repo
 ```
@@ -42,7 +44,7 @@ thomas.n@compfest.id
 Admin123
 ```
 # Docker Usage  
-I personally recommended this, as I awalys use it almost on all my project eliminate the term `It work on my machine`.  
+I personally recommended this, as I awalys use it almost on all my project.It eliminate the term `It work on my machine`.  
 1. Create Network and databases container
 ```
 sudo docker network create seasalon_network
