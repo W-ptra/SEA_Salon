@@ -6,7 +6,9 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
 const app = express();
-const port = 8000;
+const port = process.env.PORT;
+const listenTo = "0.0.0.0";
+require("dotenv").config();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -15,7 +17,7 @@ app.use(cors({ origin: '*' }));
 app.use(cookieParser());
 
 app.use(session({
-  secret: 'your_secret_key',
+  secret: process.env.SESSION_KEY,
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false }
@@ -26,6 +28,6 @@ app.use(sanitize);
 app.use('/api', apiRoute);
 app.use('', viewRoute);
 
-app.listen(port, () => {
+app.listen(port,listenTo, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
