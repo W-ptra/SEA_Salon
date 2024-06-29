@@ -57,30 +57,20 @@
                 <h1>Our Service</h1>
             </div>
             <div class="container-fluid d-flex flex-wrap justify-content-evenly">
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
 
-                    <img src="/img/service hairstyle.svg" class="card-img-top" alt="" style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Haircuts and Styling</h5>
+                <% service_list.forEach(item => { %>
+
+                    <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
+
+                        <img src="/img/service.svg" class="card-img-top" alt="" style="max-width: 8rem;">
+                        <div class="card-body">
+                            <h5 class="card-text"> <%= item.name %> </h5>
+                        </div>
                     </div>
-                </div>
 
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
+                <% }) %>
 
-                    <img src="/img/service manicure.svg" class="card-img-top" alt="" style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Manicure and Pedicure</h5>
-                    </div>
-                </div>
-
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
-
-                    <img src="/img/service facial treatment.svg" class="card-img-top" alt=""
-                        style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Facial Treatments</h5>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
@@ -97,7 +87,7 @@
             
             <% dummy_review.forEach(item => { %>
             
-            <div class="m-2 px-4 py-2" style="width: auto; background-color: white; border-radius: 1rem; border-color: rgba(0, 0, 0, 0.10);">
+            <div class="m-2 px-4 py-2" style="width: 80vw; background-color: white; border-radius: 1rem; border-color: rgba(0, 0, 0, 0.10);">
                 <h5 class="mt-2"> <%= item.name %> </h5>
                 <p> <%= item.review %> </p>
                 <p>Star: <%= item.star %> </p>

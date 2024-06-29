@@ -64,30 +64,19 @@
                 <h1>Our Service</h1>
             </div>
             <div class="container-fluid d-flex flex-wrap justify-content-evenly">
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
+                
+                <% service_list.forEach(item => { %>
 
-                    <img src="/img/service hairstyle.svg" class="card-img-top" alt="" style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Haircuts and Styling</h5>
+                    <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
+
+                        <img src="/img/service.svg" class="card-img-top" alt="" style="max-width: 8rem;">
+                        <div class="card-body">
+                            <h5 class="card-text"> <%= item.name %> </h5>
+                        </div>
                     </div>
-                </div>
 
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
+                <% }) %>
 
-                    <img src="/img/service manicure.svg" class="card-img-top" alt="" style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Manicure and Pedicure</h5>
-                    </div>
-                </div>
-
-                <div class=" card d-flex align-items-center pt-4 pb-2 m-3" style="width: 18rem;">
-
-                    <img src="/img/service facial treatment.svg" class="card-img-top" alt=""
-                        style="max-width: 8rem;">
-                    <div class="card-body">
-                        <h5 class="card-text">Facial Treatments</h5>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -104,9 +93,9 @@
             
             <% dummy_review.forEach(item => { %>
             
-            <div class="m-2 px-4 py-2" style="width: auto; background-color: white; border-radius: 1rem; border-color: rgba(0, 0, 0, 0.10);">
-                <h5 class="mt-2"> <%= item.name %> </h5>
-                <p> <%= item.review %> </p>
+            <div class="m-2 px-4 py-2" style="width: 80vw; background-color: white; border-radius: 1rem; border-color: rgba(0, 0, 0, 0.10);">
+                <h5 class="mt-2">Name: <%= item.name %> </h5>
+                <p>Review: <%= item.review %> </p>
                 <p>Star: <%= item.star %> </p>
             </div>
             
@@ -124,7 +113,7 @@
             <div class="input-group mb-3 mt-3">
                 <input type="number" min="1" max="5" class="form-control"id="comment_star"  placeholder="Star" aria-label="Name" aria-describedby="basic-addon1">
             </div>
-            <p id="submit_commant_message"></p>
+            <p class="text-center" id="submit_commant_message" style="color: red;"></p>
             <div class="d-flex align-items justify-content-center mt-3">
                 <button type="button" class="btn" style="width: 8rem; background-color: #ED569B; color: white;" onclick="addNewCommand()">Submit</button>
             </div>

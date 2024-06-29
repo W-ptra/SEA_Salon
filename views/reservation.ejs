@@ -60,9 +60,10 @@
             <div class="input-group mb-3">
                 <label class="input-group-text" for="inputGroupSelect01">Service</label>
                 <select class="form-select" id="service">
-                    <option value="Haircuts and Styling">Haircuts and Styling</option>
-                    <option value="Manicure and Pedicure">Manicure and Pedicure</option>
-                    <option value="Facial Treatment">Facial Treatment</option>
+                    <% service_list.forEach(item => { %>
+                        <option value="<%= item.name %>"  > <%= item.name %></option>
+                    <% }) %>
+                    
                 </select>
             </div>
             <div class="mb-4">

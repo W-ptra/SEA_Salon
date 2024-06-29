@@ -1,12 +1,12 @@
+const viewRoute = require("./Controller/viewController");
+const apiRoute = require("./Controller/apiController");
+const sanitize = require("./middleware/sanitize");
 const express = require("express");
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
 const app = express();
 const port = 8000;
-const viewRoute = require("./Controller/viewController");
-const apiRoute = require("./Controller/apiController");
-const sanitize = require("./middleware/sanitize");
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));

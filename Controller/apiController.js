@@ -3,6 +3,8 @@ const router = express.Router();
 const {createNewReview} = require("../model/reviewModel");
 const {createnewUser} = require("../model/userModel");
 const {createNewReservation} = require("../model/reservationModel");
+const {createNewBranch} = require("../model/branchModel");
+const {createNewService} = require("../model/serviceModel");
 const {login} = require("../helper/authentication");
 
 router.post('/auth/login',async (req,res)=>{
@@ -56,5 +58,27 @@ router.post('/reservation',async (req,res)=>{
     await createNewReservation(newReservation);
     return res.status(201).json({message:"reservation sucessfully created"});
 })
+
+router.post('/branch',async (req,res)=>{
+    const newBranch = {
+        name:req.body.name,
+        location:req.body.location,
+        open_time:req.body.open,
+        close_time:req.body.close
+    }
+
+    await createNewBranch(newBranch);
+    return res.status(201).json({message:"branch sucessfully created"});
+});
+
+router.post('/service',async (req,res)=>{
+    const newService = {
+        name:req.body.name,
+        duration:req.body.duration
+    }
+
+    await createNewService(newService);
+    return res.status(201).json({message:"Service sucessfully created"});
+});
 
 module.exports = router;
