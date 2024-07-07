@@ -14,7 +14,6 @@ async function comparePassword(plainPassword,hashedPassword){
     return isMatch;
 }
 
-
 module.exports = {
     createHash,
     comparePassword
