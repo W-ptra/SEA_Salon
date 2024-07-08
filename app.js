@@ -1,6 +1,7 @@
 const viewRoute = require("./Controller/viewController");
 const apiRoute = require("./Controller/apiController");
 const sanitize = require("./middleware/sanitize");
+const logger = require("./middleware/logger")
 const express = require("express");
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -24,6 +25,7 @@ app.use(session({
 }));
 
 app.use(sanitize);
+app.use(logger);
 
 app.use('/api', apiRoute);
 app.use('', viewRoute);
