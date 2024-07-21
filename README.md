@@ -1,8 +1,8 @@
 # SEA_Salon
 Tugas Umum Seleksi Comfest.id Academy ~ Software Engineering  
-Visit this link: 
+Visit this link: [Non Active!]
 ```
-https://seasalon.wisnuputra.xyz
+https://seasalon.wisnuputra.xyz 
 ```
 I already host it on cloud  
 # Usage
