@@ -1,10 +1,8 @@
 # SEA_Salon
 Tugas Umum Seleksi Comfest.id Academy ~ Software Engineering  
-Visit this link: [Non Active!]
-```
-https://seasalon.wisnuputra.xyz 
-```
-I already host it on cloud  
+
+SeaSalon is web based application for beauty salon build using Bootstrap, Javascript, Node.js, Express.js, MariaDB/MYSQL. 
+
 # Usage
 ## prerequisite
 1. nodejs v20.2.0
